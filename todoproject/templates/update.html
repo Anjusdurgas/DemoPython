@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  label{
+   display:inline-block;
+    width: 110px;
+   margin-top: 2px;
+padding:5px 5px;
+}
+}
+
+</style>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      Task Update
+    </div>
+    <div class="card-body">
+      <form method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit">
+</form>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
